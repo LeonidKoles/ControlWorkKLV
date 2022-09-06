@@ -4,39 +4,42 @@
     int n = Convert.ToInt32(Console.ReadLine());
     string[] arrayStart = new string[n];
     Console.WriteLine("Заполните массив через ENTER.");
-    for (int i = 0; i < n; i++)
-    {
-        arrayStart[i] = Console.ReadLine();
-    }
-    for (int i = 0; i < n; i++)
-    {
-        Console.Write(arrayStart[i] + "\t");
-    }
+    FillArray(arrayStart);
+    PrintArray(arrayStart);
     Console.WriteLine();
-    int count = 0;
+     int count = 0;
     for (int i = 0; i < n; i++)
     {
         if (arrayStart[i].Length <= 3)
         {
             count += 1;
         }
-
     }
     string[] arrayFinish = new string[count];
     int ind = 0;
     for (int i = 0; i < n; i++)
     {
-        if (arrayStart[i].Length <= 3)
+        if (arrayStart[i].Length <= 3 && arrayStart[i].Length != 0)
         {
             arrayFinish[ind] = arrayStart[i];
             ind++;
         }
-
     }
     Console.WriteLine();
-    for (int i = 0; i < count; i++)
+    PrintArray(arrayFinish);
+}
+void FillArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.Write(arrayFinish[i] + "\t");
+        array[i] = Console.ReadLine();
     }
 }
-Zadacha();determining the size of the final array, its creation and filling
+void PrintArray(string[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + "\t");
+    }
+}
+Zadacha();
