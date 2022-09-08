@@ -21,8 +21,8 @@
     {
         if (arrayStart[i].Length <= 3 && arrayStart[i].Length != 0)
         {
-            arrayFinish[ind] = arrayStart[i];
-            ind++;
+            arrayFinish[i] = arrayStart[i];
+            ind ++;
         }
     }
     Console.WriteLine();
