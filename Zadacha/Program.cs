@@ -7,12 +7,12 @@
     FillArray(arrayStart);
     PrintArray(arrayStart);
     Console.WriteLine();
-     int count = 0;
+    int count = 0;
     for (int i = 0; i < n; i++)
     {
         if (arrayStart[i].Length <= 3)
         {
-            count += 1;
+            count ++;
         }
     }
     string[] arrayFinish = new string[count];
